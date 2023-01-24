@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Iterate over list</title>
+</head>
+<body>
+
+  <h1>Going to traverse elements in collection....</h1>
+  
+  <h1 th:text="${programming}"></h1>
+  
+  <ul>
+   <li th:each="n : ${programming}">
+       <span th:text="${n}"></span>
+   </li>
+  </ul>
+</body>
+
+</html>
