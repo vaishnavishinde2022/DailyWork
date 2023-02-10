@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- xmlns: xml nameSpace , th:thymeleaf -->
 <html lang="en" xmlns:th="http://www.thymeLeaf.org">
 <head>
 <meta charset="ISO-8859-1">
@@ -7,10 +7,25 @@
 <body>
   <h1>Hello</h1>
   
+    <!--text:Attribute of thymeleaf  -->
   <h1>Name of user:<span th:text="${name}"></span></h1>
   <h2>Email:<span th:text="${userEmail}"></span></h2>
   <h3>Username:<span th:text="${username}"></span></h3>
   <h4>Password:<span th:text="${userpassword}"></span></h4>
+  
+  <h1>Name in upper case : <span th:text="${#strings.toUpperCase(name)}"></span></h1>
+  <h2>length of name :<span th:text="${#strings.length(name)}"></span></h2>
+  <h5>Date:<span th:text="${currentDate}"></span></h5>
+  
+  <!-- we can create a variables according to our need/requirement -->
+  <div th:with="a=5 ,b=67 , Name=${name},name=rutuja">
+     <h1>value of a :<span th:text="${a}"></span></h1>
+     <h2>value of b :<span th:text="${b}"></span></h2>
+     <h3>Local value of name is :<span th:text="${name}"></span></h3>
+     <h4>global value of Name is :<span th:text="${Name}"></span></h4>
+      <h5>sum of a and b is :<span th:text="${a+b}"></span></h5>
+      <h5 th:text="'sum of '+${a}+' and '+${b}+' is: '+${a+b}"></h5>
+  </div>
   
 </body>
 </html>

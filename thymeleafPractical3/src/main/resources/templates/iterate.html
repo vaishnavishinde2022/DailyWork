@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Example of loop</title>
+</head>
+<body>
+  <h1>Going to traversal elements in collection....</h1>
+  <!-- for direct print list contents -->
+  <h1 th:text="${list}"></h1>
+  
+  <!-- iterate over the list by using iterator -->
+   <ul>
+    <li th:each="n:${list}">
+      <span th:text="${n}"></span>
+    </li>
+   </ul>
+   
+   <!-- by using status attribute print index of each element -->
+    <ul>
+      <li th:each="name,status:${list}">
+        
+        <span th:text="${status.index}+' '+${name}"></span>
+      
+      </li>
+    </ul>
+    
+    <!-- conditional rendering over the list by using status attribute -->
+    <ul>
+     <li th:each="name,status:${list}">
+     
+       <span th:style="${status.odd}? 'color:red;font-weight:bold':''" th:text="${name}"></span>
+     
+     </li>
+    </ul>
+</body>
+</html>
