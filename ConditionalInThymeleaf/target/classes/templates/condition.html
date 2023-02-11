@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Conditional demo page</title>
+</head>
+<body>
+
+  <h1>Hello World</h1>
+  
+  <!-- Elvis operator -->
+  <h1>User is: <span th:style="${isActive}?'color:green':'color:red'"th:text="${isActive}?'Active':'Not Active'"></span></h1>
+
+ <!-- if-Unless operator -->
+  <h1 th:if="${gender}=='M'">Male</h1>
+  <h1 th:unless="${gender}=='M'">Female</h1>
+  
+  <!-- switch-case -->
+  <div th:switch="${#ArrayList.size(mylist)}">
+    <h1 th:case="'0'">List contain zero elements</h1>
+    
+    <h1 th:case="'1'">List contain one element</h1>
+    <h2 th:case="'*'">List contain more than one elements</h2>
+ </div>
+ 
+</body>
+</html>
