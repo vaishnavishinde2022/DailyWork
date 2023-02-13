@@ -15,14 +15,27 @@ public class User
     private int id;
 	private String name;
 	private String email;
+	private String mobile;
 	private String username;
 	private String password;
 	
-	public User(String name, String email, String username, String password) 
+	public String getMobile() 
+	{
+		return mobile;
+	}
+
+	public void setMobile(String mobile)
+	{
+		this.mobile = mobile;
+	}
+	
+	
+	public User(String name, String email,String mobile, String username, String password) 
 	{
 		super();
 		this.name = name;
 		this.email = email;
+		this.mobile=mobile;
 		this.username = username;
 		this.password = password;
 	}
@@ -38,12 +51,12 @@ public class User
 		return id;
 	}
 	
+	
 
 	@Override
-	public String toString() 
-	{
-		return "User [id=" + id + ", name=" + name + ", email=" + email + ", username=" + username + ", password="
-				+ password + "]";
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", email=" + email + ", mobile=" + mobile + ", username="
+				+ username + ", password=" + password + "]";
 	}
 
 	public void setId(int id)

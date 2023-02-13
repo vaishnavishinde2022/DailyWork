@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Stored message</title>
+</head>
+<body style="background-color:LightGray;">
+  <h1 style=text-align:center>Data Stored successfully!</h1>
+  <h1 style=text-align:center>click on Continue to move further</h1>
+  
+  <form method="post" action="loginPage">
+   <table style="margin-left:auto;margin-right:auto">
+    <tr><td  style="font-size:20px">Name:</td><td th:text="${name}"><td></tr>
+    <tr><td style="font-size:20px">Email:</td><td th:text="${email}"><td></tr>
+     <tr><td style="font-size:20px">Mobile:</td><td th:text="${mobile}"><td></tr>
+      <tr><td style="font-size:20px">username:</td><td th:text="${username}"><td></tr>
+       <tr><td style="font-size:20px">password:</td><td th:text="${password}"><td></tr>
+        <tr><td><input type="submit" value="Go To Login"><td></tr>
+                   
+   </table>
+  </form>
+ <!--  <div style="text-align:center">
+    <button type="button"style="font-size:20px">Back</button>-->
+ <!--  <a href='login'> <button type="button"style="font-size:20px">Go To Login</button></a>-->
+ <!--  <a href='login'>Go To Login</a>
+   </div>-->
+</body>
+</html>

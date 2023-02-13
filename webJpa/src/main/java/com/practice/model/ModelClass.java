@@ -17,7 +17,7 @@ public class ModelClass
 	  
 	  System.out.println(result);
 	  
-	  return "Dara inserted";
+	  return "Data inserted successfully";
   }
   
 }
